@@ -3,16 +3,12 @@ using namespace std;
 int main()
 {
     float bmi;
-    int tinggi_cm, berat ;
+    int tinggi, berat;
 
     cout << "Masukkan berat:";
     cin >> berat;
     cout << "Masukkan tinggi:";
-    cin >> tinggi_cm;
-
-   
-    bmi = (berat /((tinggi_cm/100) * (tinggi_cm/100)));
-    cout << "BMI Anda: " << bmi << endl;
+    cin >> tinggi;
 
     {
         if (bmi > 30)
@@ -34,4 +30,6 @@ int main()
             cout << "Berat anda Kurang";
         }
     }
+    bmi = (berat / tinggi) * tinggi;
+    cout << "BMI Anda: " << bmi << endl;
 }
